@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+// import { Typography } from '@mui/material';
+import StartGame from "./components/StartGame";
+import GameZone from "./components/GameZone";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" Component={StartGame} />
+      <Route path="/gamezone" Component={GameZone} />
+    </Routes>
   );
 }
 
